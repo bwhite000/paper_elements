@@ -1,0 +1,9 @@
+name: paper_elements
+version: 0.0.10
+author: Brandon White <jennexproject+paperelements@gmail.com>
+homepage: http://jennex.it/now/dev/
+environment:
+  sdk: '>=1.8.5 <2.0.0'
+dependencies:
+  core_icon:
+    git: https://github.com/bwhite000/core-icon.git

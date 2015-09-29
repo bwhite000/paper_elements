@@ -1,0 +1,64 @@
+<style type="text/css">
+  paper-dialog.paper_dialog_fade_out {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+
+  paper-dialog.wide_width {
+    left: calc(50% - 312px);
+    width: 624px;
+  }
+</style>
+
+<template id="template_paper-dialog">
+  <style type="text/css">
+  :host {
+    background-color: #fff;
+    left: calc(50% - 144px);
+    position: absolute;
+    top: 45%;
+    transition: opacity 0.1s linear, transform 0.2s linear;
+    width: 288px;
+    will-change: opacity, transform;
+    z-index: 9999;
+  }
+
+  #title {
+    color: rgba(0,0,0,0.87);
+    margin: 0;
+    padding: 24px 24px 0 24px;
+  }
+
+  #content {
+    color: rgba(0,0,0,0.54);
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 490px;
+    padding: 16px 24px 0 24px;
+  }
+
+  #actions {
+    padding: 24px 16px 16px 16px;
+    text-align: right;
+  }
+
+  #actions > paper-button {
+    height: 36px;
+    line-height: 36px;
+  }
+
+  #actions > paper-button::shadow #content > span {
+    margin: 0 16px 0 16px;
+  }
+
+  #actions > #positive_button {
+    color: #0c8df0;
+  }
+  </style>
+
+  <section>
+    <h2 id="title"></h2>
+    <div id="content"></div>
+    <div id="actions"></div>
+  </section>
+</template>

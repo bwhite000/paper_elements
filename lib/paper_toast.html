@@ -1,0 +1,31 @@
+<style type="text/css">
+  paper-toast.paper_toast_slide_in {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 0.1s linear, transform 0.1s cubic-bezier(.3,1,.52,.98);
+  }
+</style>
+
+<template id="template_paper-toast">
+  <style type="text/css">
+  :host {
+    background: #323232;
+    border-radius: 24px;
+    bottom: 12px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    color: rgba(255,255,255,0.87);
+    left: 12px;
+    line-height: 20px;
+    min-width: 288px;
+    opacity: 0;
+    padding: 16px 24px 12px 24px;
+    position: fixed;
+    transform: translateY(32px);
+    transition: opacity 0.15s linear, transform 0.1s cubic-bezier(.48,.02,.7,0);
+    will-change: opacity, transform;
+    z-index: 99999;
+  }
+  </style>
+
+  <span id="message"></span>
+</template>

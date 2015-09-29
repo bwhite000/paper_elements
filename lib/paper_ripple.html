@@ -1,0 +1,46 @@
+<template id="template_paper-ripple">
+  <style>
+  :host {
+    display: block;
+    height: 100%;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  #ripple {
+    background: rgba(0,0,0,0.04);
+    border-radius: 100%;
+    display: block;
+    visibility: hidden;
+    height: 1px;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transform: scale(1);
+    width: 1px;
+  }
+
+  #ripple.visible {
+    visibility: visible;
+  }
+
+  #ripple.animate {
+    transition: transform 0.25s linear, opacity 0.3s ease-out;
+  }
+
+  @-webkit-keyframes wave-anim {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(100);
+    }
+  }
+  </style>
+
+  <div id="ripple"></div>
+</template>

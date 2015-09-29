@@ -1,0 +1,48 @@
+<template id="template_paper-toggle-button">
+  <style type="text/css">
+    #toggle_container {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+    }
+
+    #toggle_bar {
+      background-color: rgb(188,188,188);
+      border-radius: 8px;
+      display: inline-block;
+      height: 14px;
+      width: 36px;
+    }
+
+    #toggle_button {
+      background-color: rgb(241, 241, 241);
+      border-radius: 50%;
+      box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.4);
+      display: block;
+      height: 20px;
+      left: 0px;
+      position: absolute;
+      top: -3px;
+      transition: transform linear 80ms, background-color linear 80ms;
+      width: 20px;
+    }
+
+    :host([checked]) #toggle_bar {
+      background-color: rgb(160,193,249);
+    }
+
+    :host([checked]) #toggle_button {
+      background-color: rgb(66,133,244);
+      transform: translateX(16px);
+    }
+
+    :host([disabled]) #toggle_container {
+      opacity: 0.3;
+    }
+  </style>
+
+  <div id="toggle_container">
+    <div id="toggle_bar"></div>
+    <div id="toggle_button"></div>
+  </div>
+</template>

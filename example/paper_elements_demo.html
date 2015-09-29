@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Paper Button Example</title>
+
+  <link rel="import" href="packages/core_elements/core_icon.html" />
+  <link rel="import" href="packages/core_elements/core-icons/default-icons.html" />
+  <link rel="import" href="packages/paper_elements/paper_button.html" />
+  <link rel="import" href="packages/paper_elements/paper_card.html" />
+  <link rel="import" href="packages/paper_elements/paper_icon_button.html" />
+  <link rel="import" href="packages/paper_elements/paper_ripple.html" />
+  <link rel="import" href="packages/paper_elements/paper_toggle_button.html" />
+
+  <style>
+    body {
+      font-family: arial, sans-serif;
+    }
+
+    label {
+      display: inline-block;
+      min-width: 150px;
+    }
+
+    paper-card {
+      display: inline-block;
+      padding: 10px 15px;
+      width: 275px;
+    }
+  </style>
+
+  <script src="paper_elements_demo_main.dart" type="application/dart"></script>
+</head>
+<body>
+  <h1>Paper Elements Demo</h1>
+
+  <h2>paper-button</h2>
+  <label>Regular:</label> <paper-button label="Regular"></paper-button>
+  <br /><br />
+  <label>Raised:</label> <paper-button label="Raised button" raisedButton></paper-button>
+  <br /><br />
+  <label>Recentering Touch:</label> <paper-button label="Recentering touch" recenteringTouch></paper-button>
+
+  <br /><br />
+
+  <h2>paper-card</h2>
+  <paper-card>This is a sample paper card.</paper-card>
+
+  <br /><br />
+
+  <h2>paper-toggle-button</h2>
+  <label>Unchecked:</label> <paper-toggle-button></paper-toggle-button>
+  <br /><br />
+  <label>Checked:</label> <paper-toggle-button checked></paper-toggle-button>
+  <br /><br />
+  <label>Disabled:</label> <paper-toggle-button disabled></paper-toggle-button>
+  <br /><br />
+  <label>Disabled/Checked:</label> <paper-toggle-button checked disabled></paper-toggle-button>
+
+  <br /><br />
+  <h2>paper-icon-button</h2>
+  <paper-icon-button icon="default.home"></paper-icon-button>
+</body>
+</html>

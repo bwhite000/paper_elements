@@ -1,0 +1,72 @@
+<template id="template_paper-button">
+  <style type="text/css">
+  :host {
+    display: inline-block;
+    position: relative;
+    border: 0;
+    background: transparent;
+    text-align: center;
+    font: inherit;
+    text-transform: uppercase;
+    outline: none;
+    overflow: none;
+    border-radius: 3px;
+    -webkit-user-select: none;
+      user-select: none;
+    cursor: pointer;
+  }
+
+  :host(.hover:hover) {
+    background: #e4e4e4;
+  }
+
+  :host([raisedButton]) {
+    background-color: #dfdfdf;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  :host([raisedButton].hover:hover) {
+    background-color: #d6d6d6;
+  }
+
+  :host([raisedButton]:active) {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  :host([disabled]) {
+    background: #eaeaea !important;
+    color: #a8a8a8 !important;
+    cursor: auto;
+  }
+
+  #content {
+    position: relative;
+  }
+
+  #icon {
+    margin: 8px;
+  }
+
+  #content > span {
+    display: inline-block;
+    margin: 0.5em;
+  }
+  </style>
+
+  <template if="{{raisedButton}}">
+    <div fit id="shadow-container">
+      <paper-shadow id="shadow" z="{{z}}" animated></paper-shadow>
+    </div>
+  </template>
+
+  <div id="content">
+    <template if="{{iconSrc || icon}}">
+      <core-icon id="icon" src="{{iconSrc}}" icon="{{icon}}"></core-icon>
+    </template>
+
+    <template if="{{label}}">
+      <span class="label"></span>
+    </template>
+  </div>
+</template>
